@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+    <style type="text/css">
+        html,
+        body {
+            background: #151515;
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            height: 100%;
+        }
+
+        #glassbox {
+            background: #fff0;
+            border: 1px solid #ececec00;
+            height: 270px;
+            max-height: 270px;
+            margin: 30px auto auto auto;
+            position: relative;
+            width: 520px;
+            max-width: 520px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        #username,
+        #password {
+            cursor: move;
+
+            width: 120px;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            font-size: 20px;
+            position: absolute;
+            float: left;
+            left: 30px;
+
+        }
+
+        #password {
+            top: 60px;
+        }
+
+        #respond {
+            color: #fff;
+            margin: 0 auto 0 auto;
+            width: 960px;
+
+        }
+
+        #profileImage {
+            height: 270px;
+            max-height: 270px;
+            width: 520px;
+            max-width: 520px;
+            position: absolute;
+            float: left;
+
+        }
+
+        #imageUpload {
+            position: relative;
+            display: none;
+        }
+
+        .form-style-1 {
+            margin: 10px auto;
+            max-width: 400px;
+            padding: 20px 12px 10px 20px;
+            font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            color: #ffffff;
+        }
+
+        .form-style-1 li {
+            padding: 0;
+            display: block;
+            list-style: none;
+            margin: 10px 0 0 0;
+        }
+
+        .form-style-1 label {
+            margin: 0 0 3px 0;
+            padding: 0px;
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-style-1 input[type=text],
+        .form-style-1 input[type=date],
+        .form-style-1 input[type=datetime],
+        .form-style-1 input[type=number],
+        .form-style-1 input[type=search],
+        .form-style-1 input[type=time],
+        .form-style-1 input[type=url],
+        .form-style-1 input[type=email],
+        textarea,
+        select {
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            border: 1px solid #BEBEBE;
+            padding: 7px;
+            margin: 0px;
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            outline: none;
+        }
+
+        .form-style-1 input[type=text]:focus,
+        .form-style-1 input[type=date]:focus,
+        .form-style-1 input[type=datetime]:focus,
+        .form-style-1 input[type=number]:focus,
+        .form-style-1 input[type=search]:focus,
+        .form-style-1 input[type=time]:focus,
+        .form-style-1 input[type=url]:focus,
+        .form-style-1 input[type=email]:focus,
+        .form-style-1 textarea:focus,
+        .form-style-1 select:focus {
+            -moz-box-shadow: 0 0 8px #88D5E9;
+            -webkit-box-shadow: 0 0 8px #88D5E9;
+            box-shadow: 0 0 8px #88D5E9;
+            border: 1px solid #88D5E9;
+        }
+
+        .form-style-1 .field-divided {
+            width: 49%;
+        }
+
+        .form-style-1 .field-long {
+            width: 100%;
+        }
+
+        .form-style-1 .field-select {
+            width: 100%;
+        }
+
+        .form-style-1 .field-textarea {
+            height: 100px;
+        }
+
+        .form-style-1 input[type=submit],
+        .form-style-1 input[type=button] {
+            background: #4B99AD;
+            padding: 8px 15px 8px 15px;
+            border: none;
+            color: #fff;
+        }
+
+        .form-style-1 input[type=submit]:hover,
+        .form-style-1 input[type=button]:hover {
+            background: #4691A4;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+        }
+
+        .form-style-1 .required {
+            color: red;
+        }
+
+        h1 {
+            color: #FFF;
+            text-align: center;
+        }
+        .footer {
+            bottom: 0;
+            color: #fff;
+            background: #201c1cb3;
+            position: absolute;
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+            padding: 15px 0;
+        }
+        .footer span{
+            /*padding: 10px*/
+        }
+
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.json.js"></script>
+	
+    <title>Free Print DMA Radius Manager</title>
+    
+	<meta name="Description" content="Convert Your Radius Manager CSV card's File To PDF with Full customization choose how many cards in page and how many column">
+    <meta name="Keywords" content="DMA,Radius Manager,CSV,PDF,Radius,Manager,Free,Convert,Online,Converter,radiusmanager">
+</head>
+
+<body style="background: url('img/background.jpg');background-size: cover;">
+    <table width="90%" style="border:none;margin: 0 auto;">
+        <tr>
+            <td>
+                <h1>Free Print DMA Radius Manager</h1>
+                <form action='output.php' method="POST" enctype="multipart/form-data" id="myform" name="myform" target="_BLANK">
+                    <input type="hidden" name="ux" value="" id="ux">
+                    <input type="hidden" name="uy" value="" id="uy">
+                    <input type="hidden" name="px" value="" id="px">
+                    <input type="hidden" name="py" value="" id="py">
+                    <div id="glassbox">
+                        <image id="profileImage" src="img/des.jpg" />
+                        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                        <div id="username">username</div>
+                        <div id="password">password</div>
+                    </div>
+                    <ul class="form-style-1">
+                        <li><label>.csv File<span class="required">*</span></label><input id="csvUpload" type="file" name="csv" placeholder=".csv file" required="" capture></li>
+                        <li>
+                            <label>Font size</label>
+                            <select name="size" class="field-select">
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label>Dimensions</label>
+                            <select name="dim" class="field-select">
+                                <option value="10">Page(A4) 2x5 cards</option>
+                                <option value="21">Page(A4) 3x7 cards</option>
+                                <option value="40">Page(A4) 4x10 cards</option>
+								<option value="60">Page(A4) 5x12 cards</option>
+                            </select>
+                        </li>
+                        <li>
+                            <input type="submit" name='convert' value="GET PDF" />
+                        </li>
+                    </ul>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#username").draggable({
+                containment: '#glassbox',
+                scroll: false
+            }).mousemove(function() {
+                var coord = $(this).position();
+                $("p:last").text("left: " + coord.left + ", top: " + coord.top);
+            }).mouseup(function() {
+                var ux = document.getElementById('ux');
+                var uy = document.getElementById('uy');
+                var coords = [];
+                var coord = $(this).position();
+                ux.value = coord.left;
+                uy.value = coord.top;
+            });
+            $("#password").draggable({
+                containment: '#glassbox',
+                scroll: false
+            }).mousemove(function() {
+                var coord = $(this).position();
+                $("p:last").text("left: " + coord.left + ", top: " + coord.top);
+            }).mouseup(function() {
+                var px = document.getElementById('px');
+                var py = document.getElementById('py');
+                var coords = [];
+                var coord = $(this).position();
+                px.value = coord.left;
+                py.value = coord.top;
+            });
+        });
+        $("#profileImage").click(function(e) {
+            $("#imageUpload").click();
+        });
+        function fasterPreview(uploader) {
+            if (uploader.files && uploader.files[0]) {
+                $('#profileImage').attr('src',
+                    window.URL.createObjectURL(uploader.files[0]));
+            }
+        }
+        $("#imageUpload").change(function() {
+            fasterPreview(this);
+        });
+    </script>
+    <!--  -->
+	<div class="footer">
+        <span>جميع الحقوق محفوظة</span>
+    </div>
+</body>
+</html>
